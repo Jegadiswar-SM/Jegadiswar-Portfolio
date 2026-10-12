@@ -1,4 +1,116 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f4f1e9"><meta name="description" content="Q-FLOW28-PF post-quantum cryptography accelerator architecture."><title>Q-FLOW28-PF — Jegadiswar S M</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/site.css"><script src="assets/site.js" defer></script></head><body>
-<div class="topline"><div class="wrap"><span>JSM / project file 06</span><span>Architecture work · 2026</span></div></div><header class="nav-shell"><nav class="nav wrap" aria-label="Main navigation"><a class="brand" href="index.html"><span class="brand-mark">JSM</span><span>Jegadiswar S M</span></a><button class="menu" aria-expanded="false" aria-controls="nav-links">Menu +</button><div class="nav-links" id="nav-links"><a href="index.html">Home</a><a aria-current="page" href="projects.html">Projects</a><a href="experience.html">Experience</a><a href="notes.html">Notes</a><a href="contact.html">Contact ↗</a></div></nav></header>
-<main><header class="page-hero"><div class="wrap"><div class="eyebrow">Project file 06 / architecture ongoing</div><h1>Q-FLOW28-PF —<br><em>cryptography in hardware.</em></h1><p>A programmable post-quantum cryptography fabric architecture for a TSMC 28 nm target.</p></div></header><section class="page-content"><div class="wrap"><div class="detail-top"><span>PQC · APB4 · AXI4</span><span>Architecture work · not fabricated</span></div><div class="detail-body"><aside class="detail-side">01 / Design intent<br>02 / Resource plan<br>03 / Integration<br>04 / Proof still needed</aside><div class="detail-content"><h2>Design intent</h2><p>Explore a shared hardware platform for post-quantum cryptographic algorithms, with secure control and data movement. This project is at the architecture stage; listed blocks are design scope, not completed or measured silicon.</p><h3>Architecture scope</h3><ul><li>Shared NTT/INTT resources and polynomial arithmetic.</li><li>Keccak-f[1600] support.</li><li>Dedicated X25519 datapath.</li><li>ML-KEM-512/768/1024 and ML-DSA-44/65/87 algorithm targets.</li></ul><h3>System interfaces and security blocks</h3><p>APB4 control, AXI4 data movement, secure scratchpad, key vault, TRNG/DRBG and a security controller are in the architectural plan.</p><div class="detail-callout"><b>Target:</b> TSMC 28 nm. There is no tapeout result or silicon performance claim on this page.</div><h3>Work needed before implementation claims</h3><p>Freeze the supported algorithm parameter sets, define the threat model and security boundaries, quantify shared-resource scheduling and memory traffic, then verify functional correctness and constant-time behavior before physical design.</p><a class="backlink" href="projects.html">← Back to all projects</a></div></div></div></section></main>
-<footer><div class="wrap foot"><span>JEGADISWAR S M · Q-FLOW28-PF</span><span>Architecture is not silicon.</span><a href="projects.html">Project index ↗</a></div></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7fafe">
+  <meta name="description" content="Q-FLOW28-PF post-quantum cryptography accelerator architecture.">
+  <title>Q-FLOW28-PF — Jegadiswar S M</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <div class="topline">
+    <div class="wrap">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span class="topline-pill"><span class="status-dot"></span>Architecture Phase</span>
+        <span>JSM / Project File 06</span>
+      </div>
+      <span>Chennai, India · 2026</span>
+    </div>
+  </div>
+
+  <header class="nav-shell">
+    <nav class="nav wrap" aria-label="Main navigation">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">JSM</span>
+        <span>Jegadiswar S M</span>
+      </a>
+      <button class="menu" aria-expanded="false" aria-controls="nav-links">Menu +</button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a aria-current="page" href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
+        <a href="notes.html">Notes</a>
+        <a href="contact.html">Contact ↗</a>
+        <a class="nav-cta" href="login.html">Portal ↗</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <header class="page-hero">
+      <div class="wrap">
+        <div class="eyebrow">Project File 06 / Architecture Exploration</div>
+        <h1>Q-FLOW28-PF —<br><em>cryptography in hardware.</em></h1>
+        <p class="section-lede">
+          A programmable post-quantum cryptography fabric architecture targeting a TSMC 28 nm node.
+        </p>
+      </div>
+    </header>
+
+    <section class="page-content">
+      <div class="wrap">
+        <div class="detail-top">
+          <span>PQC · APB4 · AXI4</span>
+          <span style="color:var(--brand)">● Architecture work · Not fabricated</span>
+        </div>
+
+        <div class="detail-body">
+          <aside class="detail-side">
+            01 / Design intent<br>
+            02 / Resource plan<br>
+            03 / Integration<br>
+            04 / Proof still needed
+          </aside>
+
+          <div class="detail-content">
+            <h2>Design intent</h2>
+            <p>
+              Explore a shared hardware accelerator platform for post-quantum cryptographic primitives, with secure memory boundaries and high-throughput data movement. This project is at the architecture stage; listed blocks represent specification targets.
+            </p>
+
+            <h3>Architecture scope</h3>
+            <ul>
+              <li>Shared NTT/INTT engine and modular polynomial arithmetic.</li>
+              <li>Keccak-f[1600] state hashing support.</li>
+              <li>Dedicated X25519 elliptic curve datapath.</li>
+              <li>ML-KEM-512/768/1024 and ML-DSA-44/65/87 algorithm targets.</li>
+            </ul>
+
+            <h3>System interfaces and security blocks</h3>
+            <p>
+              APB4 control register interface, AXI4 master/slave data movement, secure scratchpad memory, internal key vault, TRNG/DRBG, and a security root-of-trust controller form the architectural roadmap.
+            </p>
+
+            <div class="detail-callout">
+              <b>Target:</b> TSMC 28 nm node. There is no tapeout claim or silicon measurement on this page.
+            </div>
+
+            <h3>Work needed before implementation claims</h3>
+            <p>
+              Freeze the supported algorithm parameter sets, define the threat model and security boundaries, quantify shared-resource scheduling and memory traffic, then verify functional correctness and constant-time execution behavior before starting physical design.
+            </p>
+
+            <a class="backlink" href="projects.html">← Back to all projects</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <span>JEGADISWAR S M · Q-FLOW28-PF</span>
+      <span>Architecture is not silicon.</span>
+      <div style="display:flex;gap:16px;">
+        <a href="login.html">Portal</a>
+        <a href="projects.html">Project index ↗</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

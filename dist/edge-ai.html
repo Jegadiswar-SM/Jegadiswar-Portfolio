@@ -1,4 +1,114 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f4f1e9"><meta name="description" content="Edge-AI RISC-V SoC student ASIC program through the Chip Designers Guild."><title>Edge-AI SoC — Jegadiswar S M</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/site.css"><script src="assets/site.js" defer></script></head><body>
-<div class="topline"><div class="wrap"><span>JSM / project file 05</span><span>Student ASIC program</span></div></div><header class="nav-shell"><nav class="nav wrap" aria-label="Main navigation"><a class="brand" href="index.html"><span class="brand-mark">JSM</span><span>Jegadiswar S M</span></a><button class="menu" aria-expanded="false" aria-controls="nav-links">Menu +</button><div class="nav-links" id="nav-links"><a href="index.html">Home</a><a aria-current="page" href="projects.html">Projects</a><a href="experience.html">Experience</a><a href="notes.html">Notes</a><a href="contact.html">Contact ↗</a></div></nav></header>
-<main><header class="page-hero"><div class="wrap"><div class="eyebrow">Project file 05 / Chip Designers Guild</div><h1>Edge AI,<br><em>close to the sensor.</em></h1><p>A student SoC program combining a RISC-V CPU and inference accelerators for industrial anomaly detection.</p></div></header><section class="page-content"><div class="wrap"><div class="detail-top"><span>Ibex · RV32IM · Wishbone</span><span>SCL180 target · in development</span></div><div class="detail-body"><aside class="detail-side">01 / System blocks<br>02 / Team work<br>03 / What remains open</aside><div class="detail-content"><h2>What the system is meant to do</h2><p>Bring a small RISC-V core together with neural-network accelerators and data movement for edge anomaly-detection workloads. This is an active student ASIC effort led through the Chip Designers Guild.</p><h3>Current architecture description</h3><ul><li>Ibex RV32IM CPU core.</li><li>INT8 neural processing unit with 64 MACs.</li><li>256-neuron LIF spiking neural network accelerator.</li><li>Four-channel DMA and Wishbone interconnect.</li></ul><p>The SCL180 process is the target. The architecture and student implementation work are in development; this page does not imply tapeout or measured silicon.</p><h3>My role</h3><p>As founder and captain of the Guild, I coordinate RTL, verification, FPGA prototyping and ASIC-flow work. The project is also a team learning exercise in integration: interfaces, memory movement, reset behavior and reproducible tests matter as much as the accelerator blocks.</p><h3>Next evidence to publish</h3><p>Once available, add a stable regression summary, FPGA demonstration and an implementation report that names the exact RTL revision, tool versions, constraints and PDK assumptions.</p><a class="backlink" href="projects.html">← Back to all projects</a></div></div></div></section></main>
-<footer><div class="wrap foot"><span>JEGADISWAR S M · EDGE-AI SOC</span><span>Team engineering, still in progress.</span><a href="projects.html">Project index ↗</a></div></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7fafe">
+  <meta name="description" content="Edge-AI RISC-V SoC student ASIC program through the Chip Designers Guild.">
+  <title>Edge-AI SoC — Jegadiswar S M</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <div class="topline">
+    <div class="wrap">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span class="topline-pill"><span class="status-dot"></span>In Development</span>
+        <span>JSM / Project File 05</span>
+      </div>
+      <span>Chip Designers Guild Student ASIC</span>
+    </div>
+  </div>
+
+  <header class="nav-shell">
+    <nav class="nav wrap" aria-label="Main navigation">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">JSM</span>
+        <span>Jegadiswar S M</span>
+      </a>
+      <button class="menu" aria-expanded="false" aria-controls="nav-links">Menu +</button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a aria-current="page" href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
+        <a href="notes.html">Notes</a>
+        <a href="contact.html">Contact ↗</a>
+        <a class="nav-cta" href="login.html">Portal ↗</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <header class="page-hero">
+      <div class="wrap">
+        <div class="eyebrow">Project File 05 / Chip Designers Guild</div>
+        <h1>Edge AI,<br><em>close to the sensor.</em></h1>
+        <p class="section-lede">
+          A student SoC program combining a RISC-V CPU core and inference accelerators for edge anomaly detection.
+        </p>
+      </div>
+    </header>
+
+    <section class="page-content">
+      <div class="wrap">
+        <div class="detail-top">
+          <span>Ibex · RV32IM · Wishbone Bus</span>
+          <span style="color:var(--brand)">● SCL180 target · In development</span>
+        </div>
+
+        <div class="detail-body">
+          <aside class="detail-side">
+            01 / System blocks<br>
+            02 / Team work<br>
+            03 / What remains open
+          </aside>
+
+          <div class="detail-content">
+            <h2>What the system is meant to do</h2>
+            <p>
+              Bring a small RISC-V core together with neural-network accelerators and data movement for edge anomaly-detection workloads. This is an active student ASIC effort led through the Chip Designers Guild at VIT Chennai.
+            </p>
+
+            <h3>Current architecture description</h3>
+            <ul>
+              <li>Ibex RV32IM CPU core.</li>
+              <li>INT8 neural processing unit with 64 MACs.</li>
+              <li>256-neuron LIF spiking neural network accelerator.</li>
+              <li>Four-channel DMA and Wishbone interconnect.</li>
+            </ul>
+            <p>
+              The SCL180 process is the target. The architecture and student implementation work are in active development; this page does not imply tapeout or measured silicon.
+            </p>
+
+            <h3>My role</h3>
+            <p>
+              As founder and captain of the Guild, I coordinate RTL, verification, FPGA prototyping and ASIC-flow work. The project is also a team learning exercise in integration: interfaces, memory movement, reset behavior, and reproducible tests matter as much as the accelerator blocks.
+            </p>
+
+            <h3>Next evidence to publish</h3>
+            <p>
+              Once available, publish a stable regression summary, FPGA demonstration, and an implementation report detailing the exact RTL revision, tool versions, constraints, and PDK assumptions.
+            </p>
+
+            <a class="backlink" href="projects.html">← Back to all projects</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <span>JEGADISWAR S M · EDGE-AI SOC</span>
+      <span>Team engineering, still in progress.</span>
+      <div style="display:flex;gap:16px;">
+        <a href="login.html">Portal</a>
+        <a href="projects.html">Project index ↗</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

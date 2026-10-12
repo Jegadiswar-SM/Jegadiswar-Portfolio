@@ -1,12 +1,162 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f4f1e9"><meta name="description" content="Selected VLSI, research and tooling projects by Jegadiswar S M."><title>Projects — Jegadiswar S M</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/site.css"><script src="assets/site.js" defer></script></head><body>
-<div class="topline"><div class="wrap"><span>JSM / notes from silicon</span><span>Chennai, India · 2026</span></div></div><header class="nav-shell"><nav class="nav wrap" aria-label="Main navigation"><a class="brand" href="index.html"><span class="brand-mark">JSM</span><span>Jegadiswar S M</span></a><button class="menu" aria-expanded="false" aria-controls="nav-links">Menu +</button><div class="nav-links" id="nav-links"><a href="index.html">Home</a><a aria-current="page" href="projects.html">Projects</a><a href="experience.html">Experience</a><a href="notes.html">Notes</a><a href="contact.html">Contact ↗</a></div></nav></header>
-<main><header class="page-hero"><div class="wrap"><div class="eyebrow">Projects / revision 01</div><h1>Things I’m<br><em>trying to make work.</em></h1><p>Six projects across signal processing, reliability, mixed-signal design and semiconductor tooling. Click through for the current scope, what is known, and what still needs proving.</p></div></header>
-<section class="page-content"><div class="wrap"><div class="filters" role="group" aria-label="Filter projects"><button class="filter" data-filter="all" aria-pressed="true">Everything</button><button class="filter" data-filter="silicon" aria-pressed="false">Silicon</button><button class="filter" data-filter="research" aria-pressed="false">Research</button><button class="filter" data-filter="tools" aria-pressed="false">Tools</button></div><noscript><p class="section-lede">Project filters need JavaScript; all projects are listed below.</p></noscript><div class="project-table"><div class="table-head"><span>Index</span><span>Project</span><span>Short version</span><span>Status</span><span></span></div>
-<a class="project-row" data-kind="silicon" href="mhda.html"><span class="project-num">01</span><div><h3>MHDA</h3><small>Acoustic denoising · SystemVerilog</small></div><span class="project-desc">Hybrid 8-tap RLS and MLP; simulation report documents gain and HW/SW error.</span><span class="project-stage">Simulation evidence</span><span class="project-arrow">↗</span></a>
-<a class="project-row" data-kind="research" href="vigil.html"><span class="project-num">02</span><div><h3>VIGIL</h3><small>Reliability · BOOMv3</small></div><span class="project-desc">Selective temporal checking with recovery. Specified; full baseline regression remains unresolved.</span><span class="project-stage">Research / open</span><span class="project-arrow">↗</span></a>
-<a class="project-row" data-kind="silicon" href="pulsar.html"><span class="project-num">03</span><div><h3>PULSAR-4X</h3><small>Mixed-signal · SAR ADC</small></div><span class="project-desc">Four-channel time-interleaved converter for a high-speed receiver. Architecture work.</span><span class="project-stage">Architecture</span><span class="project-arrow">↗</span></a>
-<a class="project-row" data-kind="tools" href="tapeitout.html"><span class="project-num">04</span><div><h3>TapeItOut</h3><small>Semiconductor tooling · Founder work</small></div><span class="project-desc">Automation and QoR reporting across open-source ASIC flows; product direction is evolving.</span><span class="project-stage">Building</span><span class="project-arrow">↗</span></a>
-<a class="project-row" data-kind="silicon" href="edge-ai.html"><span class="project-num">05</span><div><h3>Edge-AI RISC-V SoC</h3><small>Student ASIC program · SCL180 target</small></div><span class="project-desc">Ibex RV32IM CPU, INT8 NPU, LIF SNN accelerator, DMA and Wishbone interconnect.</span><span class="project-stage">In development</span><span class="project-arrow">↗</span></a>
-<a class="project-row" data-kind="silicon" href="q-flow.html"><span class="project-num">06</span><div><h3>Q-FLOW28-PF</h3><small>Post-quantum cryptography · 28 nm target</small></div><span class="project-desc">Programmable PQC fabric architecture with shared and dedicated compute resources.</span><span class="project-stage">Architecture</span><span class="project-arrow">↗</span></a>
-</div><p class="section-lede" style="margin-top:28px">Project status is deliberately plain. A target is not a result; a passing unit test is not system closure.</p></div></section></main>
-<footer><div class="wrap foot"><span>JEGADISWAR S M · PROJECTS</span><span>Silicon. Systems. Possibility.</span><a href="contact.html">Get in touch ↗</a></div></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7fafe">
+  <meta name="description" content="Selected VLSI, research and tooling projects by Jegadiswar S M.">
+  <title>Projects — Jegadiswar S M</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <div class="topline">
+    <div class="wrap">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span class="topline-pill"><span class="status-dot"></span>Index Live</span>
+        <span>JSM / Project Deck & Silicon Manifest</span>
+      </div>
+      <span>Chennai, India · 2026</span>
+    </div>
+  </div>
+
+  <header class="nav-shell">
+    <nav class="nav wrap" aria-label="Main navigation">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">JSM</span>
+        <span>Jegadiswar S M</span>
+      </a>
+      <button class="menu" aria-expanded="false" aria-controls="nav-links">Menu +</button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a aria-current="page" href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
+        <a href="notes.html">Notes</a>
+        <a href="contact.html">Contact ↗</a>
+        <a class="nav-cta" href="login.html">Portal ↗</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <header class="page-hero">
+      <div class="wrap">
+        <div class="eyebrow">Projects / revision 01</div>
+        <h1>Things I’m<br><em>trying to make work.</em></h1>
+        <p class="section-lede">
+          Six projects across signal processing, reliability, mixed-signal design, and semiconductor tooling. Click through for the current scope, what is verified by simulation, and what still needs proving.
+        </p>
+      </div>
+    </header>
+
+    <section class="page-content">
+      <div class="wrap">
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button class="filter" data-filter="all" aria-pressed="true">Everything</button>
+          <button class="filter" data-filter="silicon" aria-pressed="false">Silicon</button>
+          <button class="filter" data-filter="research" aria-pressed="false">Research</button>
+          <button class="filter" data-filter="tools" aria-pressed="false">Tools</button>
+        </div>
+
+        <noscript>
+          <p class="section-lede">Project filters need JavaScript; all projects are listed below.</p>
+        </noscript>
+
+        <div class="project-table">
+          <div class="table-head">
+            <span>Index</span>
+            <span>Project</span>
+            <span>Short version</span>
+            <span>Status</span>
+            <span></span>
+          </div>
+
+          <a class="project-row" data-kind="silicon" href="mhda.html">
+            <span class="project-num">01</span>
+            <div>
+              <h3>MHDA</h3>
+              <small>Acoustic denoising · SystemVerilog</small>
+            </div>
+            <span class="project-desc">Hybrid 8-tap RLS and MLP; simulation report documents 8.79 dB gain and 2.62 LSB error.</span>
+            <span class="project-stage" style="color:var(--status-green)">● Simulation evidence</span>
+            <span class="project-arrow">↗</span>
+          </a>
+
+          <a class="project-row" data-kind="research" href="vigil.html">
+            <span class="project-num">02</span>
+            <div>
+              <h3>VIGIL</h3>
+              <small>Reliability · BOOMv3</small>
+            </div>
+            <span class="project-desc">Selective temporal checking with recovery. Specified; full baseline regression remains unresolved.</span>
+            <span class="project-stage" style="color:var(--status-amber)">● Research / open gate</span>
+            <span class="project-arrow">↗</span>
+          </a>
+
+          <a class="project-row" data-kind="silicon" href="pulsar.html">
+            <span class="project-num">03</span>
+            <div>
+              <h3>PULSAR-4X</h3>
+              <small>Mixed-signal · SAR ADC</small>
+            </div>
+            <span class="project-desc">Four-channel time-interleaved converter for high-speed receiver front-ends. Architecture stage.</span>
+            <span class="project-stage" style="color:var(--brand)">● Architecture</span>
+            <span class="project-arrow">↗</span>
+          </a>
+
+          <a class="project-row" data-kind="tools" href="tapeitout.html">
+            <span class="project-num">04</span>
+            <div>
+              <h3>TapeItOut</h3>
+              <small>Semiconductor tooling · Founder work</small>
+            </div>
+            <span class="project-desc">Automation and QoR reporting across open-source ASIC flows; product direction evolving.</span>
+            <span class="project-stage" style="color:var(--text-main)">● Building</span>
+            <span class="project-arrow">↗</span>
+          </a>
+
+          <a class="project-row" data-kind="silicon" href="edge-ai.html">
+            <span class="project-num">05</span>
+            <div>
+              <h3>Edge-AI RISC-V SoC</h3>
+              <small>Student ASIC program · SCL180 target</small>
+            </div>
+            <span class="project-desc">Ibex RV32IM CPU, INT8 NPU, LIF SNN accelerator, DMA and Wishbone interconnect.</span>
+            <span class="project-stage" style="color:var(--brand)">● In development</span>
+            <span class="project-arrow">↗</span>
+          </a>
+
+          <a class="project-row" data-kind="silicon" href="q-flow.html">
+            <span class="project-num">06</span>
+            <div>
+              <h3>Q-FLOW28-PF</h3>
+              <small>Post-quantum cryptography · 28 nm target</small>
+            </div>
+            <span class="project-desc">Programmable PQC fabric architecture with shared and dedicated compute resources.</span>
+            <span class="project-stage" style="color:var(--brand)">● Architecture</span>
+            <span class="project-arrow">↗</span>
+          </a>
+        </div>
+
+        <p class="section-lede" style="margin-top:32px">
+          Project status is deliberately plain. A target is not a result; a passing unit test is not system closure.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <span>JEGADISWAR S M · PROJECTS</span>
+      <span>Silicon. Systems. Possibility.</span>
+      <div style="display:flex;gap:16px;">
+        <a href="login.html">Portal</a>
+        <a href="contact.html">Get in touch ↗</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

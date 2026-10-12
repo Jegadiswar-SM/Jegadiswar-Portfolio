@@ -1,4 +1,115 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f4f1e9"><meta name="description" content="PULSAR-4X time-interleaved SAR ADC architecture, targets and open validation work."><title>PULSAR-4X — Jegadiswar S M</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/site.css"><script src="assets/site.js" defer></script></head><body>
-<div class="topline"><div class="wrap"><span>JSM / project file 03</span><span>Chennai, India · 2026</span></div></div><header class="nav-shell"><nav class="nav wrap" aria-label="Main navigation"><a class="brand" href="index.html"><span class="brand-mark">JSM</span><span>Jegadiswar S M</span></a><button class="menu" aria-expanded="false" aria-controls="nav-links">Menu +</button><div class="nav-links" id="nav-links"><a href="index.html">Home</a><a aria-current="page" href="projects.html">Projects</a><a href="experience.html">Experience</a><a href="notes.html">Notes</a><a href="contact.html">Contact ↗</a></div></nav></header>
-<main><header class="page-hero"><div class="wrap"><div class="eyebrow">Project file 03 / architecture ongoing</div><h1>PULSAR-4X —<br><em>four clocks, one stream.</em></h1><p>Four-channel, 8-bit time-interleaved SAR ADC architecture for a high-speed SerDes receiver.</p></div></header><section class="page-content"><div class="wrap"><div class="detail-top"><span>TSMC 65 nm GP · architecture target</span><span>Not taped out</span></div><div class="detail-body"><aside class="detail-side">01 / System goal<br>02 / Architecture<br>03 / Targets<br>04 / Risks</aside><div class="detail-content"><h2>The system goal</h2><p>Explore a four-channel time-interleaved converter for a PAM4 SerDes receive front end. The system must balance conversion throughput against inter-channel timing mismatch, offset and gain error.</p><h3>Architecture direction</h3><p>Each channel uses an 8-bit nonbinary SAR conversion with loop-unrolled 2-bit-per-cycle decisions. Four channels are time-interleaved and followed by a 4:1 mux/deskew path. Background calibration is planned for offset, gain, sampling skew and comparator mismatch.</p><div class="detail-callout"><b>Target only:</b> 4 channels × 500 MS/s each = 2.0 GS/s aggregate. These are architectural targets; no silicon measurements exist.</div><h3>Other stated targets</h3><ul><li>5–6 conversion cycles per channel.</li><li>Less than 1.0 ps RMS inter-channel sampling skew.</li><li>33.4 mW typical and 41.2 mW maximum total power targets.</li></ul><h3>Open work</h3><p>Prove the nonbinary search margins, quantify calibration convergence and stability, and close the circuit-level power and noise budget before treating any of these numbers as achievable implementation results.</p><a class="backlink" href="projects.html">← Back to all projects</a></div></div></div></section></main>
-<footer><div class="wrap foot"><span>JEGADISWAR S M · PULSAR-4X</span><span>Targets are not measurements.</span><a href="projects.html">Project index ↗</a></div></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7fafe">
+  <meta name="description" content="PULSAR-4X time-interleaved SAR ADC architecture, targets and open validation work.">
+  <title>PULSAR-4X — Jegadiswar S M</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <div class="topline">
+    <div class="wrap">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span class="topline-pill"><span class="status-dot"></span>Architecture Phase</span>
+        <span>JSM / Project File 03</span>
+      </div>
+      <span>Chennai, India · 2026</span>
+    </div>
+  </div>
+
+  <header class="nav-shell">
+    <nav class="nav wrap" aria-label="Main navigation">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">JSM</span>
+        <span>Jegadiswar S M</span>
+      </a>
+      <button class="menu" aria-expanded="false" aria-controls="nav-links">Menu +</button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a aria-current="page" href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
+        <a href="notes.html">Notes</a>
+        <a href="contact.html">Contact ↗</a>
+        <a class="nav-cta" href="login.html">Portal ↗</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <header class="page-hero">
+      <div class="wrap">
+        <div class="eyebrow">Project File 03 / Architecture Exploration</div>
+        <h1>PULSAR-4X —<br><em>four clocks, one stream.</em></h1>
+        <p class="section-lede">
+          Four-channel, 8-bit time-interleaved SAR ADC architecture for high-speed SerDes receiver front-ends.
+        </p>
+      </div>
+    </header>
+
+    <section class="page-content">
+      <div class="wrap">
+        <div class="detail-top">
+          <span>TSMC 65 nm GP · Architecture Target</span>
+          <span style="color:var(--brand)">● Architectural Specification</span>
+        </div>
+
+        <div class="detail-body">
+          <aside class="detail-side">
+            01 / System goal<br>
+            02 / Architecture<br>
+            03 / Targets<br>
+            04 / Open work
+          </aside>
+
+          <div class="detail-content">
+            <h2>The system goal</h2>
+            <p>
+              Explore a four-channel time-interleaved converter for a PAM4 SerDes receive front end. The system must balance conversion throughput against inter-channel timing skew, offset, and gain mismatch.
+            </p>
+
+            <h3>Architecture direction</h3>
+            <p>
+              Each channel uses an 8-bit nonbinary SAR conversion with loop-unrolled 2-bit-per-cycle decisions. Four channels are time-interleaved and followed by a 4:1 mux/deskew path. Background calibration is planned for offset, gain, sampling skew and comparator mismatch.
+            </p>
+
+            <div class="detail-callout">
+              <b>Target only:</b> 4 channels × 500 MS/s each = 2.0 GS/s aggregate throughput. These are architectural goals; no silicon measurements exist.
+            </div>
+
+            <h3>Other stated targets</h3>
+            <ul>
+              <li>5–6 conversion cycles per channel.</li>
+              <li>Less than 1.0 ps RMS inter-channel sampling skew.</li>
+              <li>33.4 mW typical and 41.2 mW maximum total power targets.</li>
+            </ul>
+
+            <h3>Open work</h3>
+            <p>
+              Prove the nonbinary search margins, quantify calibration convergence and stability, and close the circuit-level power and noise budget before treating any of these numbers as achievable implementation results.
+            </p>
+
+            <a class="backlink" href="projects.html">← Back to all projects</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <span>JEGADISWAR S M · PULSAR-4X</span>
+      <span>Targets are not measurements.</span>
+      <div style="display:flex;gap:16px;">
+        <a href="login.html">Portal</a>
+        <a href="projects.html">Project index ↗</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
