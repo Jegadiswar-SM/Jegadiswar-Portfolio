@@ -61,9 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.reveal').forEach(node => node.classList.add('in'));
   }
 
-  // 4. Magnetic Micro-interactions (Animos style)
+  // 4. Magnetic Micro-interactions
   if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const magneticElements = document.querySelectorAll('.btn-primary, .btn-secondary, .brand-mark, .nav-cta, .wb-btn, .now-mark');
+    const magneticElements = document.querySelectorAll('.btn-primary, .btn-secondary, .brand-mark, .wb-btn, .now-mark');
     magneticElements.forEach(el => {
       el.addEventListener('mousemove', (e) => {
         const rect = el.getBoundingClientRect();
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dataPattern = ['=0x5A===0xC3===0xFF=', '=0xC3===0xFF===0x10=', '=0xFF===0x10===0x5A='];
     let step = 0;
 
-    const interval = setInterval(() => {
+    setInterval(() => {
       if (!running) return;
       cycle++;
       step = (step + 1) % clkPattern.length;
@@ -114,55 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // 6. Login / Developer Portal System
-  const loginTabs = document.querySelectorAll('.login-tab-btn');
-  const passkeyGroup = document.getElementById('group-passkey');
-  const tokenGroup = document.getElementById('group-token');
-  const loginForm = document.getElementById('portal-form');
-  const loginStatus = document.getElementById('login-status');
-  const togglePass = document.getElementById('toggle-pass');
-
-  if (loginTabs.length > 0 && passkeyGroup && tokenGroup) {
-    loginTabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        loginTabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-        const mode = tab.dataset.mode;
-        if (mode === 'passkey') {
-          passkeyGroup.style.display = 'block';
-          tokenGroup.style.display = 'none';
-        } else {
-          passkeyGroup.style.display = 'none';
-          tokenGroup.style.display = 'block';
-        }
-      });
-    });
-  }
-
-  if (togglePass) {
-    togglePass.addEventListener('click', () => {
-      const passInput = document.getElementById('auth-token');
-      if (passInput) {
-        const isPassword = passInput.type === 'password';
-        passInput.type = isPassword ? 'text' : 'password';
-        togglePass.textContent = isPassword ? 'Hide' : 'Show';
-      }
-    });
-  }
-
-  if (loginForm && loginStatus) {
-    loginForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      loginStatus.style.display = 'block';
-      loginStatus.className = 'login-status-msg success';
-      loginStatus.textContent = '✓ Hardware token authenticated. Redirecting to silicon bench...';
-      setTimeout(() => {
-        window.location.href = 'index.html';
-      }, 1200);
-    });
-  }
-
-  // 7. 404 Clock Recovery Button
+  // 6. 404 Clock Recovery Button
   const recoveryBtn = document.getElementById('btn-recover-clock');
   const recoveryConsole = document.getElementById('recovery-console');
   if (recoveryBtn && recoveryConsole) {
