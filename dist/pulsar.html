@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7fafe">
-  <meta name="description" content="PULSAR-4X time-interleaved SAR ADC architecture, targets and open validation work.">
-  <title>PULSAR-4X — Jegadiswar S M</title>
+  <meta name="theme-color" content="#f7f4ed">
+  <meta name="description" content="PULSAR-4X is a four-channel time-interleaved SAR ADC architecture study with explicit targets and open work.">
+  <title>PULSAR-4X | Jegadiswar SM</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/site.css?v=gliflow_blue_v3">
-  <script src="assets/site.js?v=gliflow_blue_v3" defer></script>
+  <link rel="stylesheet" href="assets/site.css?v=portfolio-ink-rust-15">
+  <script src="assets/site.js?v=portfolio-ink-rust-15" defer></script>
 </head>
 <body>
   <div class="topline">
     <div class="wrap">
       <div style="display:flex;align-items:center;gap:10px;">
-        <span class="topline-pill"><span class="status-dot"></span>Architecture Phase</span>
-        <span>JSM / Project File 03</span>
+        <span class="topline-pill"><span class="status-dot"></span>Architecture in progress</span>
+        <span>JSM / Mixed-signal design</span>
       </div>
       <span>Chennai, India · 2026</span>
     </div>
@@ -27,7 +27,7 @@
     <nav class="nav wrap" aria-label="Main navigation">
       <a class="brand" href="index.html">
         <span class="brand-mark">JSM</span>
-        <span>Jegadiswar S M</span>
+        <span>Jegadiswar SM</span>
       </a>
       <button class="menu" aria-expanded="false" aria-controls="nav-links">Menu +</button>
       <div class="nav-links" id="nav-links">
@@ -43,10 +43,10 @@
   <main>
     <header class="page-hero">
       <div class="wrap">
-        <div class="eyebrow">Project File 03 / Architecture Exploration</div>
-        <h1>PULSAR-4X —<br><em>four clocks, one stream.</em></h1>
+        <div class="eyebrow">Project 03 / Architecture exploration</div>
+        <h1>Four ADC channels.<br><em>One high-speed stream.</em></h1>
         <p class="section-lede">
-          Four-channel, 8-bit time-interleaved SAR ADC architecture for high-speed SerDes receiver front-ends.
+          I’m exploring a four-channel, 8-bit time-interleaved SAR converter for high-speed SerDes receivers.
         </p>
       </div>
     </header>
@@ -63,34 +63,34 @@
             01 / System goal<br>
             02 / Architecture<br>
             03 / Targets<br>
-            04 / Open work
+            04 / What’s next
           </aside>
 
           <div class="detail-content">
-            <h2>The system goal</h2>
+            <h2>How do four converters behave as one?</h2>
             <p>
-              Explore a four-channel time-interleaved converter for a PAM4 SerDes receive front end. The system must balance conversion throughput against inter-channel timing skew, offset, and gain mismatch.
+              The idea is to use four converters together in a PAM4 SerDes receiver. They need to keep up with the data while controlling timing skew, offset, and gain mismatch between channels.
             </p>
 
-            <h3>Architecture direction</h3>
+            <h3>How it’s designed</h3>
             <p>
               Each channel uses an 8-bit nonbinary SAR conversion with loop-unrolled 2-bit-per-cycle decisions. Four channels are time-interleaved and followed by a 4:1 mux/deskew path. Background calibration is planned for offset, gain, sampling skew and comparator mismatch.
             </p>
 
             <div class="detail-callout">
-              <b>Target only:</b> 4 channels × 500 MS/s each = 2.0 GS/s aggregate throughput. These are architectural goals; no silicon measurements exist.
+              <b>Still a target:</b> 4 channels × 500 MS/s each = 2.0 GS/s aggregate throughput. This is an architectural goal, not a measured result.
             </div>
 
-            <h3>Other stated targets</h3>
+            <h3>Other goals</h3>
             <ul>
               <li>5–6 conversion cycles per channel.</li>
               <li>Less than 1.0 ps RMS inter-channel sampling skew.</li>
               <li>33.4 mW typical and 41.2 mW maximum total power targets.</li>
             </ul>
 
-            <h3>Open work</h3>
+            <h3>What I need to prove</h3>
             <p>
-              Prove the nonbinary search margins, quantify calibration convergence and stability, and close the circuit-level power and noise budget before treating any of these numbers as achievable implementation results.
+              I still need to check the nonbinary search margins, test whether calibration settles reliably, and work out the circuit’s power and noise budget. Until then, these numbers are goals, not implementation results.
             </p>
 
             <a class="backlink" href="projects.html">← Back to all projects</a>
@@ -102,8 +102,8 @@
 
   <footer>
     <div class="wrap foot">
-      <span>JEGADISWAR S M · PULSAR-4X</span>
-      <span>Targets are not measurements.</span>
+      <span>JEGADISWAR SM · PULSAR-4X</span>
+      <span>Still a design target · No silicon measurements</span>
       <div style="display:flex;gap:16px;">
         <a href="index.html">Home</a>
         <a href="projects.html">Project index ↗</a>

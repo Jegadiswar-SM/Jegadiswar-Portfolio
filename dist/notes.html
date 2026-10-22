@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7fafe">
-  <meta name="description" content="Current questions and working notes from Jegadiswar S M's engineering projects.">
-  <title>Notes — Jegadiswar S M</title>
+  <meta name="theme-color" content="#f7f4ed">
+  <meta name="description" content="Notes from Jegadiswar SM’s work in RTL and verification, including results, setbacks, and open questions.">
+  <title>Notes | Jegadiswar SM</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/site.css?v=gliflow_blue_v3">
-  <script src="assets/site.js?v=gliflow_blue_v3" defer></script>
+  <link rel="stylesheet" href="assets/site.css?v=portfolio-ink-rust-15">
+  <script src="assets/site.js?v=portfolio-ink-rust-15" defer></script>
 </head>
 <body>
   <div class="topline">
     <div class="wrap">
       <div style="display:flex;align-items:center;gap:10px;">
-        <span class="topline-pill"><span class="status-dot"></span>Lab Log Active</span>
-        <span>JSM / Engineering Notes & Hypotheses</span>
+        <span class="topline-pill"><span class="status-dot"></span>Latest notes</span>
+        <span>JSM / Notes from my workbench</span>
       </div>
       <span>Chennai, India · 2026</span>
     </div>
@@ -27,7 +27,7 @@
     <nav class="nav wrap" aria-label="Main navigation">
       <a class="brand" href="index.html">
         <span class="brand-mark">JSM</span>
-        <span>Jegadiswar S M</span>
+        <span>Jegadiswar SM</span>
       </a>
       <button class="menu" aria-expanded="false" aria-controls="nav-links">Menu +</button>
       <div class="nav-links" id="nav-links">
@@ -43,10 +43,10 @@
   <main>
     <header class="page-hero">
       <div class="wrap">
-        <div class="eyebrow">Notes / unfinished thoughts welcome</div>
-        <h1>Questions I’m<br><em>working through.</em></h1>
+        <div class="eyebrow">Notes / work in progress</div>
+        <h1>What worked.<br><em>What didn’t.</em></h1>
         <p class="section-lede">
-          Short technical notes, microarchitecture design questions, and verification logs. I add longer write-ups when I have reproducible evidence and waveforms to share.
+          Notes from my RTL, verification, and architecture work. What passed, what failed, and what I need to check before I draw a conclusion.
         </p>
       </div>
     </header>
@@ -62,8 +62,8 @@
             <article class="timeline-row">
               <span class="timeline-date">OCT ’26</span>
               <div>
-                <h3>A baseline that does not pass is still the result.</h3>
-                <p>VIGIL’s checker units have passed their focused tests, but the full M0 regression has not cleared. The current runtime result is inconclusive. The right next move is to fix the baseline and repeat, not to claim a reliability improvement.</p>
+                <h3>A failed baseline is still useful information.</h3>
+                <p>VIGIL’s checker units pass their focused tests, but the full M0 regression hasn’t passed yet. The latest runtime result is inconclusive. I need to get the baseline working and rerun it before I can say anything about reliability.</p>
               </div>
               <span class="timeline-place">VIGIL / VERIFICATION</span>
             </article>
@@ -71,8 +71,8 @@
             <article class="timeline-row">
               <span class="timeline-date">OCT ’26</span>
               <div>
-                <h3>Mark targets as targets.</h3>
-                <p>PULSAR-4X’s 2.0 GS/s aggregate rate is an architecture target built from four 500 MS/s channels. Until implementation and measurement exist, it belongs in the specification column—not the results column.</p>
+                <h3>These numbers are still goals.</h3>
+                <p>PULSAR-4X aims to combine four 500 MS/s channels for 2.0 GS/s total. There’s no implementation or measurement yet, so treat that figure as a target, not a result.</p>
               </div>
               <span class="timeline-place">PULSAR / MIXED-SIGNAL</span>
             </article>
@@ -80,8 +80,8 @@
             <article class="timeline-row">
               <span class="timeline-date">2026</span>
               <div>
-                <h3>Keep the numerical contract visible.</h3>
-                <p>MHDA’s reported gain and hardware/software error are only useful alongside the fixed-point behavior, topology and simulation conditions that produced them. A metric without its contract is hard to reproduce.</p>
+                <h3>The fixed-point details matter.</h3>
+                <p>MHDA’s reported gain and hardware/software error only make sense alongside the fixed-point behavior and simulation setup that produced them. Without those details, it’s hard to reproduce the numbers.</p>
               </div>
               <span class="timeline-place">MHDA / FIXED-POINT</span>
             </article>
@@ -89,8 +89,8 @@
             <article class="timeline-row">
               <span class="timeline-date">ONGOING</span>
               <div>
-                <h3>Learn the flow, not just the command.</h3>
-                <p>My focus is to understand how RTL decisions turn into synthesis, timing, physical design and test consequences—using scripts and repeatable checks so each result can be inspected.</p>
+                <h3>I want to understand the whole flow.</h3>
+                <p>I’m learning how RTL decisions affect synthesis, timing, physical design, and testing. Scripts and repeatable checks help me retrace how I got each result.</p>
               </div>
               <span class="timeline-place">LEARNING / ASIC</span>
             </article>
@@ -102,8 +102,8 @@
 
   <footer>
     <div class="wrap foot">
-      <span>JEGADISWAR S M · NOTES</span>
-      <span>Silicon. Systems. Possibility.</span>
+      <span>JEGADISWAR SM · NOTES</span>
+        <span>Notes from the bench, misses included.</span>
       <div style="display:flex;gap:16px;">
         <a href="index.html">Home</a>
         <a href="contact.html">Discuss an idea ↗</a>

@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7fafe">
-  <meta name="description" content="VIGIL research — selective temporal checking on BOOMv3, with validation status made explicit.">
-  <title>VIGIL — Jegadiswar S M</title>
+  <meta name="theme-color" content="#f7f4ed">
+  <meta name="description" content="VIGIL explores selective temporal checking on SonicBOOMv3; see current unit-test and baseline regression status.">
+  <title>VIGIL | Jegadiswar SM</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/site.css?v=gliflow_blue_v3">
-  <script src="assets/site.js?v=gliflow_blue_v3" defer></script>
+  <link rel="stylesheet" href="assets/site.css?v=portfolio-ink-rust-15">
+  <script src="assets/site.js?v=portfolio-ink-rust-15" defer></script>
 </head>
 <body>
   <div class="topline">
     <div class="wrap">
       <div style="display:flex;align-items:center;gap:10px;">
-        <span class="topline-pill" style="background:var(--status-amber-bg);color:var(--status-amber)"><span class="status-dot" style="background:var(--status-amber);box-shadow:0 0 0 2px rgba(217,119,6,0.25)"></span>Research Gate Open</span>
-        <span>JSM / Project File 02</span>
+        <span class="topline-pill"><span class="status-dot"></span>Research in progress</span>
+        <span>JSM / Fault-tolerant RISC-V</span>
       </div>
       <span>Chennai, India · 2026</span>
     </div>
@@ -27,7 +27,7 @@
     <nav class="nav wrap" aria-label="Main navigation">
       <a class="brand" href="index.html">
         <span class="brand-mark">JSM</span>
-        <span>Jegadiswar S M</span>
+        <span>Jegadiswar SM</span>
       </a>
       <button class="menu" aria-expanded="false" aria-controls="nav-links">Menu +</button>
       <div class="nav-links" id="nav-links">
@@ -43,10 +43,10 @@
   <main>
     <header class="page-hero">
       <div class="wrap">
-        <div class="eyebrow">Project File 02 / Research in Progress</div>
-        <h1>VIGIL —<br><em>check what matters.</em></h1>
+        <div class="eyebrow">Project 02 / Research in progress</div>
+        <h1>Can a processor check<br><em>only the work most at risk?</em></h1>
         <p class="section-lede">
-          Vulnerability-Adaptive In-Core Guarded Instruction Lane · Selective temporal checking on SonicBOOMv3 RISC-V core.
+          I’m exploring selective fault checks on the SonicBOOMv3 RISC-V core. The idea is to repeat work that may be at risk, compare the results before commit, and recover if they don’t match.
         </p>
       </div>
     </header>
@@ -55,7 +55,7 @@
       <div class="wrap">
         <div class="detail-top">
           <span>Chipyard · SonicBOOM · RV64GC</span>
-          <span style="color:var(--status-amber)">● Full M0 baseline regression: In review</span>
+          <span style="color:var(--status-amber)">● Full M0 regression: Not passing yet</span>
         </div>
 
         <div class="detail-body">
@@ -67,14 +67,14 @@
           </aside>
 
           <div class="detail-content">
-            <h2>Why this question?</h2>
+            <h2>Why check every instruction twice?</h2>
             <p>
-              Temporal redundancy can detect transient faults by comparing work performed at different times. Duplicating every instruction incurs severe power and IPC overhead; checking only vulnerable work could drastically reduce that penalty if classification and recovery mechanisms are reliable.
+              Temporal redundancy can catch transient faults by repeating work and comparing the results. Repeating every instruction can cost power and performance. VIGIL asks whether checking only vulnerable work can lower that cost while keeping detection and recovery reliable.
             </p>
 
             <h3>Proposed mechanism</h3>
             <p>
-              The current specification describes a four-class Architectural Vulnerability Factor (AVF) classifier, a single-issue shadow lane, commit-time comparison, and hybrid branch/fault-checkpoint recovery. It defines a minimum ROB extension and an eight-entry checkpoint ring.
+              The current design uses a four-class Architectural Vulnerability Factor (AVF) classifier, a single-issue shadow lane, and a comparison before commit. For recovery, it combines branch and fault checkpoints, with a minimum ROB extension and an eight-entry checkpoint ring.
             </p>
 
             <div class="detail-callout">
@@ -83,17 +83,17 @@
 
             <h3>What has been tested</h3>
             <p>
-              Isolated checker units passed: the JAL checker unit was 7/7 and the comparator unit was 2/2. These are unit checks only; they do not yet establish that the SonicBOOM microarchitecture integration is closure-ready.
+              The isolated JAL checker passed 7 of 7 tests, and the comparator passed 2 of 2. Those are unit tests. The full SonicBOOM integration still needs to pass its regression.
             </p>
 
-            <h3>What is not yet established</h3>
+            <h3>What still needs work</h3>
             <p>
-              The full M0 regression is not cleared. A previous run encountered an ELF/runtime mismatch, and runtime status remains inconclusive. There is no finished end-to-end reliability claim until the baseline stabilizes.
+              The full M0 regression hasn’t passed yet. One run hit an ELF/runtime mismatch, so the current result is inconclusive. I can’t make an end-to-end reliability claim until the baseline is stable.
             </p>
 
-            <h3>Next gate</h3>
+            <h3>Next steps</h3>
             <p>
-              Reproduce the pinned RV64GC baseline, clear the regression, and compare the guarded core against an unmodified baseline under controlled fault injections to report coverage, timing, and area trade-offs.
+              First I need to reproduce the pinned RV64GC baseline and get the regression passing. Then I can compare the guarded core with an unmodified one under controlled fault injections, and report coverage, timing, and area trade-offs.
             </p>
 
             <a class="backlink" href="projects.html">← Back to all projects</a>
@@ -105,8 +105,8 @@
 
   <footer>
     <div class="wrap foot">
-      <span>JEGADISWAR S M · VIGIL</span>
-      <span>Open result, open question.</span>
+      <span>JEGADISWAR SM · VIGIL</span>
+      <span>Still working to get the baseline passing.</span>
       <div style="display:flex;gap:16px;">
         <a href="index.html">Home</a>
         <a href="projects.html">Project index ↗</a>

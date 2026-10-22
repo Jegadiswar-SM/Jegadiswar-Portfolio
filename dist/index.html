@@ -3,23 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7fafe">
-  <meta name="description" content="Jegadiswar S M — VLSI student at VIT Chennai. I design hardware. I try to prove it wrong.">
-  <title>Jegadiswar S M — I design hardware. I try to prove it wrong.</title>
+  <meta name="theme-color" content="#f7f4ed">
+  <meta name="description" content="I’m Jegadiswar. A childhood obsession with Prince of Persia led me from games and robotics to building with silicon.">
+  <title>Jegadiswar SM | I build hardware. Then I ask what breaks.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/site.css?v=gliflow_blue_v3">
-  <script src="assets/site.js?v=gliflow_blue_v3" defer></script>
+  <link rel="stylesheet" href="assets/site.css?v=portfolio-ink-rust-15">
+  <script src="assets/site.js?v=portfolio-ink-rust-15" defer></script>
 </head>
 <body>
   <div class="topline">
-    <div class="wrap">
-      <div style="display:flex;align-items:center;gap:10px;">
-        <span class="topline-pill"><span class="status-dot"></span>Bench Active</span>
-        <span>JSM / Silicon Architecture & Verification</span>
-      </div>
-      <span>Chennai, India · Class of 2028</span>
+      <div class="wrap">
+      <div class="topline-identity"><span>JSM</span><span>From game worlds to silicon</span></div>
+      <span>Chennai, India <i>·</i> Still figuring things out</span>
     </div>
   </div>
 
@@ -27,7 +24,7 @@
     <nav class="nav wrap" aria-label="Main navigation">
       <a class="brand" href="index.html">
         <span class="brand-mark">JSM</span>
-        <span>Jegadiswar S M</span>
+        <span>Jegadiswar SM</span>
       </a>
       <button class="menu" aria-expanded="false" aria-controls="nav-links">Menu +</button>
       <div class="nav-links" id="nav-links">
@@ -45,140 +42,17 @@
     <section class="hero">
       <div class="wrap hero-grid">
         <div class="reveal">
-          <div class="eyebrow">B.Tech VLSI · VIT Chennai</div>
-          <h1>I design hardware.<br><em>I try to prove it wrong.</em></h1>
+          <div class="eyebrow">Electronics &amp; VLSI <span>·</span> VIT Chennai</div>
+          <h1>I build hardware.<br><em>Then I ask what breaks.</em></h1>
           <p class="hero-copy">
-            I’m <strong>Jegadiswar</strong>, an ECE student specializing in VLSI at VIT Chennai. I build across SystemVerilog, UVM testbenches, FPGA prototyping, and ASIC implementation flows—obsessed with what the timing reports and waveforms honestly reveal.
+            I’m <strong>Jegadiswar</strong>. This started with <em>Prince of Persia</em> and the thought, “I could build that.” These days it’s silicon instead of swords. The bugs still think they’re the final boss.
           </p>
-          <div class="hero-meta">
-            <span class="hero-tag">Chennai, India</span>
-            <span class="hero-tag">R&D @ Sentrix Robotics</span>
-            <span class="hero-tag">Captain @ Chip Designers Guild</span>
-            <span class="hero-tag">TapeItOut Flow Tooling</span>
-          </div>
           <div class="actions">
-            <a class="btn-primary" href="projects.html">Explore Projects Deck <span>↗</span></a>
-            <a class="btn-secondary" href="notes.html">Engineering Notes</a>
-            <a class="more-link" style="margin-top:0" href="contact.html">Say hello ↗</a>
+            <a class="btn-primary" href="projects.html">Selected work <span>↗</span></a>
+            <a class="more-link" style="margin-top:0" href="contact.html">Get in touch <span>↗</span></a>
           </div>
         </div>
 
-        <!-- INTERACTIVE SILICON WORKBENCH CARD -->
-        <div class="hero-workbench reveal">
-          <div class="workbench-head">
-            <div class="wb-title">
-              <span class="brand-mark" style="width:22px;height:22px;font-size:10px">IC</span>
-              <span>VIGIL · BOOMv3 Temporal Reliability</span>
-            </div>
-            <span class="wb-badge">M0 Open</span>
-          </div>
-
-          <div class="waveform-display" aria-label="Digital logic waveform visualizer">
-            <div class="wave-line">
-              <span class="wave-label">CLK</span>
-              <span class="wave-signal active" id="sig-clk">_/‾\_/‾\_/‾\_/‾\</span>
-            </div>
-            <div class="wave-line">
-              <span class="wave-label">RST_N</span>
-              <span class="wave-signal">‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾</span>
-            </div>
-            <div class="wave-line">
-              <span class="wave-label">VLD</span>
-              <span class="wave-signal" id="sig-vld">_____/‾‾‾‾‾\_____</span>
-            </div>
-            <div class="wave-line">
-              <span class="wave-label">DATA</span>
-              <span class="wave-signal" id="sig-data">=0x5A===0xC3===0xFF=</span>
-            </div>
-          </div>
-
-          <div class="workbench-metrics">
-            <div class="metric-pill">
-              <span>Simulation Cycles</span>
-              <strong id="clk-cycles">#004812</strong>
-            </div>
-            <div class="metric-pill">
-              <span>Target Clock</span>
-              <strong>1.20 GHz</strong>
-            </div>
-            <div class="metric-pill">
-              <span>Unit Checker</span>
-              <strong class="brand-text">9 / 9 Passing</strong>
-            </div>
-            <div class="metric-pill">
-              <span>Baseline Run</span>
-              <strong style="color:var(--status-amber)">Inconclusive</strong>
-            </div>
-          </div>
-
-          <div class="wb-footer">
-            <span>Live Workbench Simulation</span>
-            <button class="wb-btn" id="btn-toggle-wb" type="button">Halt Clock</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TICKER STRIP -->
-    <div class="ticker">
-      <div class="wrap">
-        <span>Chip Designers Guild</span>
-        <span class="accent">·</span>
-        <span>Sentrix Robotics Physical AI</span>
-        <span class="accent">·</span>
-        <span>TapeItOut EDA</span>
-        <span class="accent">·</span>
-        <span>SystemVerilog · UVM · OpenROAD · Vivado</span>
-      </div>
-    </div>
-
-    <!-- FEATURED PROJECTS -->
-    <section class="work-home">
-      <div class="wrap section-row">
-        <aside class="section-side">
-          <span class="section-count">01</span>
-          <span class="section-name">On my bench</span>
-        </aside>
-        <div class="reveal">
-          <h2>Some work has<br><em>numbers attached.</em></h2>
-          <p class="section-lede">
-            Some work has open questions. Both belong here. Here are two projects at different phases; the project index has the complete set.
-          </p>
-
-          <div class="featured-grid">
-            <a class="feature-card" href="mhda.html">
-              <div>
-                <div class="feature-head">
-                  <span>Fixed-Point Silicon · 2026</span>
-                  <span class="feature-badge evidence">Simulation Evidence</span>
-                </div>
-                <h3>MHDA · Make the signal cleaner</h3>
-                <p>Hybrid 8-tap RLS + MLP acoustic denoising in SystemVerilog. Repository simulation reports 8.7913 dB SNR improvement and 2.62 LSB maximum HW/SW error.</p>
-              </div>
-              <div class="feature-foot">
-                <span>Inspect Architecture & Specs ↗</span>
-                <span class="mono">01 / 06</span>
-              </div>
-            </a>
-
-            <a class="feature-card" href="vigil.html">
-              <div>
-                <div class="feature-head">
-                  <span>Fault-Tolerant Microarch · Active</span>
-                  <span class="feature-badge research">Research Gate</span>
-                </div>
-                <h3>VIGIL · Guard the vulnerable work</h3>
-                <p>Selective temporal checking on SonicBOOMv3. Checker specifications and isolated units are passing; full baseline M0 regression is currently under debugging.</p>
-              </div>
-              <div class="feature-foot">
-                <span>View Research Scope ↗</span>
-                <span class="mono">02 / 06</span>
-              </div>
-            </a>
-          </div>
-
-          <a class="more-link" href="projects.html">Open full project index →</a>
-        </div>
       </div>
     </section>
 
@@ -186,66 +60,83 @@
     <section class="paper-section">
       <div class="wrap section-row">
         <aside class="section-side">
-          <span class="section-count">02</span>
-          <span class="section-name">Workbench log</span>
+          <span class="section-name">The origin</span>
         </aside>
         <div class="reveal">
-          <h2>Still a student.<br><em>Already shipping.</em></h2>
-          <div class="prose" style="margin-top:20px">
-            <p>
-              I’m studying Electronics & Communication Engineering with a specialization in VLSI at <strong>VIT Chennai</strong>. I founded and captain the <strong>Chip Designers Guild</strong>, where we design RTL, write verification suites, prototype on FPGAs, and tape out on open-source ASIC PDKs.
-            </p>
-            <p>
-              I’m also an R&D intern at Sentrix Robotics developing tactile and environmental sensing platforms for Physical AI, and building semiconductor workflow tooling at TapeItOut. My portfolio is a lab workbench, not marketing copy: architecture, verified metrics, and ongoing regressions are labeled clearly.
-            </p>
+          <h2>It began with a game.<br><em>It led me to silicon.</em></h2>
+          <div class="origin-feature">
+            <div class="prose origin-copy">
+              <p>
+                <strong>At eight</strong>, I played <a class="story-link" href="https://commons.wikimedia.org/wiki/File:Prince_of_Persia_1_-_MS-DOS_-_Level_1_-_Sword.png" target="_blank" rel="noreferrer"><strong>Prince of Persia (1989)</strong></a> and wanted to make a game of my own. At ten, I got interested in <a class="story-link" href="experience.html#age-10">robotics and science</a>. The subjects changed, but I kept wanting to know how things worked.
+              </p>
+              <p>
+                At fifteen, I taught myself <a class="story-link" href="https://reactnative.dev/" target="_blank" rel="noreferrer"><strong>React Native</strong></a> and sold <a class="story-link" href="experience.html#age-15">billing apps to local stores</a>. The next year, I started a <a class="story-link" href="experience.html#age-16">custom clothing brand</a>. Customers would describe a design to my team, watch us make it, and get their shirt a week later. I liked seeing an idea become something people could actually use.
+              </p>
+              <p>
+                In robotics, I cared less about how a machine moved and more about <strong>its brain and heartbeat</strong>, the circuits that help it sense, compute, and respond. That curiosity led me to <a class="story-link" href="experience.html#vlsi"><strong>VLSI</strong></a>.
+              </p>
+              <a class="more-link" href="experience.html">Follow the story, age by age <span>→</span></a>
+            </div>
+            <figure class="origin-image">
+              <img src="assets/prince-of-persia-1989-dos.png" alt="A dungeon scene from the original Prince of Persia MS-DOS version, with the prince holding a sword beside a fallen skeleton" width="640" height="400" loading="lazy">
+              <figcaption>
+                <span>Prince of Persia · 1989 MS-DOS</span>
+                <span><a href="https://commons.wikimedia.org/wiki/File:Prince_of_Persia_1_-_MS-DOS_-_Level_1_-_Sword.png" target="_blank" rel="noreferrer">Image: Jordan Mechner</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a></span>
+              </figcaption>
+            </figure>
           </div>
 
-          <div class="facts">
-            <div class="fact">
-              <span>Recognition</span>
-              <b>1st Place · VOID Hackathon</b>
-            </div>
-            <div class="fact">
-              <span>Research Paper</span>
-              <b>IEEE INDICON 2026 · Submitted</b>
-            </div>
-            <div class="fact">
-              <span>Silicon & RTL</span>
-              <b>SystemVerilog · Verilator · UVM</b>
-            </div>
-            <div class="fact">
-              <span>ASIC Flow</span>
-              <b>Cadence · Yosys · OpenROAD · OpenSTA</b>
-            </div>
-          </div>
-
-          <a class="more-link" href="experience.html">Read full experience & timeline →</a>
         </div>
       </div>
     </section>
 
-    <!-- NOW SECTION -->
-    <section class="now" id="now">
-      <div class="wrap now-inner">
-        <aside class="section-side">
-          <span class="section-count">03</span>
-          <span class="section-name">Current focus</span>
-        </aside>
-        <div>
-          <h2>Holding the baseline to a strict standard.</h2>
-          <p>
-            VIGIL is the primary research milestone. Before claiming a fault-tolerance gain, its pinned M0 regression has to clear cleanly. That work is actively on the bench.
-          </p>
+    <!-- A compact, interactive through-line inspired by curated design galleries and crafted UI motion. -->
+    <section class="throughline-section" aria-labelledby="throughline-title">
+      <div class="wrap">
+        <div class="throughline-heading reveal">
+          <div>
+            <p class="eyebrow">THE THROUGH-LINE</p>
+            <a class="more-link" href="experience.html">A closer look at the journey <span>↗</span></a>
+          </div>
+          <div>
+            <h2 id="throughline-title">New interests.<br><em>Same curiosity.</em></h2>
+            <p class="throughline-intro">I still like figuring out how something works, then trying to make it myself.</p>
+          </div>
         </div>
-        <a class="now-mark" href="notes.html" title="Read technical notes">↗</a>
+        <ol class="throughline-list reveal" aria-label="Three moments in my path">
+          <li>
+            <a href="experience.html#age-08">
+              <span class="throughline-age">08</span>
+              <span class="throughline-title">A world on screen</span>
+              <span class="throughline-detail">One game made me want to build my own.</span>
+              <span class="throughline-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="experience.html#age-15">
+              <span class="throughline-age">15</span>
+              <span class="throughline-title">Software in use</span>
+              <span class="throughline-detail">Apps moved from something I learned to something I sold.</span>
+              <span class="throughline-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="experience.html#vlsi">
+              <span class="throughline-age">NOW</span>
+              <span class="throughline-title">Closer to the machine</span>
+              <span class="throughline-detail">VLSI brings me closer to the circuits behind its behavior.</span>
+              <span class="throughline-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+        </ol>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="wrap foot">
-      <span>JEGADISWAR S M · CHENNAI, INDIA</span>
-      <span>Silicon. Systems. Possibility.</span>
+      <span>JEGADISWAR SM · CHENNAI, INDIA</span>
+      <span>Still curious. Usually building something.</span>
       <div style="display:flex;gap:16px;">
         <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>

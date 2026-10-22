@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7fafe">
-  <meta name="description" content="MHDA acoustic denoising accelerator — architecture and simulation evidence.">
-  <title>MHDA — Jegadiswar S M</title>
+  <meta name="theme-color" content="#f7f4ed">
+  <meta name="description" content="MHDA audio denoising accelerator: fixed-point architecture, reported simulation results, and validation limits.">
+  <title>MHDA | Jegadiswar SM</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/site.css?v=gliflow_blue_v3">
-  <script src="assets/site.js?v=gliflow_blue_v3" defer></script>
+  <link rel="stylesheet" href="assets/site.css?v=portfolio-ink-rust-15">
+  <script src="assets/site.js?v=portfolio-ink-rust-15" defer></script>
 </head>
 <body>
   <div class="topline">
     <div class="wrap">
       <div style="display:flex;align-items:center;gap:10px;">
-        <span class="topline-pill"><span class="status-dot"></span>Simulation Documented</span>
-        <span>JSM / Project File 01</span>
+        <span class="topline-pill"><span class="status-dot"></span>Simulation results</span>
+        <span>JSM / Audio denoising</span>
       </div>
       <span>Chennai, India · 2026</span>
     </div>
@@ -27,7 +27,7 @@
     <nav class="nav wrap" aria-label="Main navigation">
       <a class="brand" href="index.html">
         <span class="brand-mark">JSM</span>
-        <span>Jegadiswar S M</span>
+        <span>Jegadiswar SM</span>
       </a>
       <button class="menu" aria-expanded="false" aria-controls="nav-links">Menu +</button>
       <div class="nav-links" id="nav-links">
@@ -43,10 +43,10 @@
   <main>
     <header class="page-hero">
       <div class="wrap">
-        <div class="eyebrow">Project File 01 / Simulation Evidence</div>
-        <h1>MHDA —<br><em>denoise the signal.</em></h1>
+        <div class="eyebrow">Project 01 / Simulation results</div>
+        <h1>Can adaptive filtering<br><em>and a small network clean audio?</em></h1>
         <p class="section-lede">
-          Monolithic Hybrid Denoising Accelerator · Fixed-point signal processing and a compact MLP in SystemVerilog.
+          I built MHDA as a fixed-point SystemVerilog audio denoiser that combines an adaptive filter with a compact neural network.
         </p>
       </div>
     </header>
@@ -62,26 +62,26 @@
           <aside class="detail-side">
             01 / The goal<br>
             02 / The design<br>
-            03 / Evidence<br>
-            04 / Open work
+            03 / Results<br>
+            04 / What’s next
           </aside>
 
           <div class="detail-content">
             <h2>The problem</h2>
             <p>
-              Build a hardware pipeline for acoustic denoising that combines adaptive filtering with a learned nonlinear correction. The target use cases include underwater acoustics and voice endpoints.
+              The goal is to reduce noise in audio using adaptive filtering and a learned correction. I’m exploring underwater audio and voice as potential use cases.
             </p>
 
             <h3>The design</h3>
             <p>
-              An 8-tap RLS stage feeds an 8→128→384→128→1 MLP. The datapath uses signed Q1.15 fixed-point arithmetic with 40-bit accumulation. The pipeline is designed to run at 100 MHz; implementation and validation evidence stay tied to the numerical contract.
+              An 8-tap RLS stage feeds an 8→128→384→128→1 MLP. The datapath uses signed Q1.15 fixed-point arithmetic with 40-bit accumulation. The target clock is 100 MHz. Any implementation results will need to be checked against the same fixed-point reference.
             </p>
 
             <div class="detail-callout">
               <b>Architecture:</b> Reference input → 8-tap RLS filter → MLP residual correction → Denoised output.
             </div>
 
-            <h3>What the current simulation report says</h3>
+            <h3>The result and its limits</h3>
             <ul>
               <li>RLS contribution: 5.0818 dB reported improvement.</li>
               <li>MLP contribution: 3.7095 dB reported improvement.</li>
@@ -89,12 +89,12 @@
               <li>Maximum hardware/software error in report: 2.62 LSB.</li>
             </ul>
             <p>
-              These are repository-backed simulation results, not silicon measurements. They depend on the stimuli and reference fixed-point model used in the report.
+              The simulation report shows an 8.7913 dB SNR improvement and a maximum hardware/software error of 2.62 LSB. These results come from the report’s test signals and fixed-point reference model. They are not measurements from fabricated silicon.
             </p>
 
-            <h3>Open work</h3>
+            <h3>What I’m working on next</h3>
             <p>
-              Preserve the numerical quirks in the frozen contract, reproduce the results from a clean checkout, and keep ASIC implementation claims separate from RTL simulation. The prepared patent material is a disclosure package; it is not a granted patent.
+              I still need to reproduce the results from a clean checkout and keep the reference model’s fixed-point behavior intact. RTL simulation and any future ASIC results will be reported separately. I’ve prepared a patent disclosure package, but no patent has been granted.
             </p>
 
             <a class="backlink" href="projects.html">← Back to all projects</a>
@@ -106,8 +106,8 @@
 
   <footer>
     <div class="wrap foot">
-      <span>JEGADISWAR S M · MHDA</span>
-      <span>Evidence before claims.</span>
+      <span>JEGADISWAR SM · MHDA</span>
+  <span>Simulation results, with their limits.</span>
       <div style="display:flex;gap:16px;">
         <a href="index.html">Home</a>
         <a href="projects.html">Project index ↗</a>

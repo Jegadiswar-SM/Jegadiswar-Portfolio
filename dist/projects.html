@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7fafe">
-  <meta name="description" content="Selected VLSI, research and tooling projects by Jegadiswar S M.">
-  <title>Projects — Jegadiswar S M</title>
+  <meta name="theme-color" content="#f7f4ed">
+  <meta name="description" content="Six projects by Jegadiswar SM, with a clear look at what’s built, what’s tested, and what’s still in progress.">
+  <title>Projects | Jegadiswar SM</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/site.css?v=gliflow_blue_v3">
-  <script src="assets/site.js?v=gliflow_blue_v3" defer></script>
+  <link rel="stylesheet" href="assets/site.css?v=portfolio-ink-rust-15">
+  <script src="assets/site.js?v=portfolio-ink-rust-15" defer></script>
 </head>
 <body>
   <div class="topline">
     <div class="wrap">
       <div style="display:flex;align-items:center;gap:10px;">
-        <span class="topline-pill"><span class="status-dot"></span>Index Live</span>
-        <span>JSM / Project Deck & Silicon Manifest</span>
+        <span class="topline-pill"><span class="status-dot"></span>Six projects</span>
+        <span>JSM / Work in progress</span>
       </div>
       <span>Chennai, India · 2026</span>
     </div>
@@ -27,7 +27,7 @@
     <nav class="nav wrap" aria-label="Main navigation">
       <a class="brand" href="index.html">
         <span class="brand-mark">JSM</span>
-        <span>Jegadiswar S M</span>
+        <span>Jegadiswar SM</span>
       </a>
       <button class="menu" aria-expanded="false" aria-controls="nav-links">Menu +</button>
       <div class="nav-links" id="nav-links">
@@ -43,10 +43,10 @@
   <main>
     <header class="page-hero">
       <div class="wrap">
-        <div class="eyebrow">Projects / revision 01</div>
-        <h1>Things I’m<br><em>trying to make work.</em></h1>
+        <div class="eyebrow">Projects / selected work</div>
+        <h1>Six projects.<br><em>Here’s where each one stands.</em></h1>
         <p class="section-lede">
-          Six projects across signal processing, reliability, mixed-signal design, and semiconductor tooling. Click through for the current scope, what is verified by simulation, and what still needs proving.
+          Some projects have simulation results; others are still taking shape. Each page shows what I’ve built, what I’ve tested, and what I still need to figure out.
         </p>
       </div>
     </header>
@@ -61,7 +61,7 @@
         </div>
 
         <noscript>
-          <p class="section-lede">Project filters need JavaScript; all projects are listed below.</p>
+          <p class="section-lede">Filters need JavaScript. If they don’t work for you, the full project list is still below.</p>
         </noscript>
 
         <div class="project-table">
@@ -79,7 +79,7 @@
               <h3>MHDA</h3>
               <small>Acoustic denoising · SystemVerilog</small>
             </div>
-            <span class="project-desc">Hybrid 8-tap RLS and MLP; simulation report documents 8.79 dB gain and 2.62 LSB error.</span>
+            <span class="project-desc">An adaptive filter and small neural network for audio denoising. Simulation reports an 8.79 dB SNR improvement and 2.62 LSB maximum error.</span>
             <span class="project-stage" style="color:var(--status-green)">● Simulation evidence</span>
             <span class="project-arrow">↗</span>
           </a>
@@ -90,8 +90,8 @@
               <h3>VIGIL</h3>
               <small>Reliability · BOOMv3</small>
             </div>
-            <span class="project-desc">Selective temporal checking with recovery. Specified; full baseline regression remains unresolved.</span>
-            <span class="project-stage" style="color:var(--status-amber)">● Research / open gate</span>
+            <span class="project-desc">A RISC-V fault-tolerance study using selective checks. The full baseline regression still needs to pass.</span>
+            <span class="project-stage" style="color:var(--status-amber)">● Research in progress</span>
             <span class="project-arrow">↗</span>
           </a>
 
@@ -101,7 +101,7 @@
               <h3>PULSAR-4X</h3>
               <small>Mixed-signal · SAR ADC</small>
             </div>
-            <span class="project-desc">Four-channel time-interleaved converter for high-speed receiver front-ends. Architecture stage.</span>
+            <span class="project-desc">A four-channel converter concept for high-speed receivers. Still at the architecture stage.</span>
             <span class="project-stage" style="color:var(--brand)">● Architecture</span>
             <span class="project-arrow">↗</span>
           </a>
@@ -112,7 +112,7 @@
               <h3>TapeItOut</h3>
               <small>Semiconductor tooling · Founder work</small>
             </div>
-            <span class="project-desc">Automation and QoR reporting across open-source ASIC flows; product direction evolving.</span>
+            <span class="project-desc">Tools for automating open-source ASIC flows and reporting results. Still in development.</span>
             <span class="project-stage" style="color:var(--text-main)">● Building</span>
             <span class="project-arrow">↗</span>
           </a>
@@ -123,7 +123,7 @@
               <h3>Edge-AI RISC-V SoC</h3>
               <small>Student ASIC program · SCL180 target</small>
             </div>
-            <span class="project-desc">Ibex RV32IM CPU, INT8 NPU, LIF SNN accelerator, DMA and Wishbone interconnect.</span>
+            <span class="project-desc">A student SoC combining an Ibex core, neural accelerators, DMA, and Wishbone.</span>
             <span class="project-stage" style="color:var(--brand)">● In development</span>
             <span class="project-arrow">↗</span>
           </a>
@@ -134,14 +134,14 @@
               <h3>Q-FLOW28-PF</h3>
               <small>Post-quantum cryptography · 28 nm target</small>
             </div>
-            <span class="project-desc">Programmable PQC fabric architecture with shared and dedicated compute resources.</span>
+            <span class="project-desc">An early design for shared and dedicated hardware to run post-quantum cryptography.</span>
             <span class="project-stage" style="color:var(--brand)">● Architecture</span>
             <span class="project-arrow">↗</span>
           </a>
         </div>
 
         <p class="section-lede" style="margin-top:32px">
-          Project status is deliberately plain. A target is not a result; a passing unit test is not system closure.
+          I mark targets clearly and keep unit-test results separate from full-system results. Each page shows what I’ve verified and what still needs work.
         </p>
       </div>
     </section>
@@ -149,8 +149,8 @@
 
   <footer>
     <div class="wrap foot">
-      <span>JEGADISWAR S M · PROJECTS</span>
-      <span>Silicon. Systems. Possibility.</span>
+      <span>JEGADISWAR SM · PROJECTS</span>
+      <span>Six projects, with an update on each.</span>
       <div style="display:flex;gap:16px;">
         <a href="index.html">Home</a>
         <a href="contact.html">Get in touch ↗</a>

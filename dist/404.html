@@ -3,23 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7fafe">
-  <meta name="description" content="404 — Signal unmapped or floating logic state.">
-  <title>404 — Signal Unmapped · Jegadiswar S M</title>
+  <meta name="theme-color" content="#f7f4ed">
+  <meta name="description" content="That page isn’t here. Head back to Jegadiswar SM’s portfolio or browse the projects.">
+  <title>Page Not Found | Jegadiswar SM</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/site.css?v=gliflow_blue_v3">
-  <script src="assets/site.js?v=gliflow_blue_v3" defer></script>
+  <link rel="stylesheet" href="assets/site.css?v=portfolio-ink-rust-15">
+  <script src="assets/site.js?v=portfolio-ink-rust-15" defer></script>
 </head>
 <body>
   <div class="topline">
     <div class="wrap">
-      <div style="display:flex;align-items:center;gap:10px;">
-        <span class="topline-pill" style="background:#fee2e2;color:#dc2626"><span class="status-dot" style="background:#dc2626;box-shadow:0 0 0 2px rgba(220,38,38,0.25)"></span>Signal Floating</span>
-        <span>JSM / Fault State Handler</span>
-      </div>
-      <span>ERROR CODE: 0x404</span>
+      <div class="topline-identity"><span>JSM</span><span>From game worlds to silicon</span></div>
+      <span>Chennai, India <i>·</i> Let’s get you back</span>
     </div>
   </div>
 
@@ -27,7 +24,7 @@
     <nav class="nav wrap" aria-label="Main navigation">
       <a class="brand" href="index.html">
         <span class="brand-mark">JSM</span>
-        <span>Jegadiswar S M</span>
+        <span>Jegadiswar SM</span>
       </a>
       <button class="menu" aria-expanded="false" aria-controls="nav-links">Menu +</button>
       <div class="nav-links" id="nav-links">
@@ -41,29 +38,18 @@
   </header>
 
   <main class="error-page-wrapper">
-    <div class="wrap" style="display:flex;justify-content:center">
+    <div class="wrap">
       <div class="error-card reveal in">
-        <div class="error-state-pill">
-          <span>● LOGIC_STATE: 1'bX (High-Z Bus)</span>
-        </div>
-        <div class="error-code">4<span>0</span>4</div>
-        <div class="error-subtitle">Signal route not found in netlist</div>
-        <p class="error-desc">
-          The requested path encountered an unrouted net or undefined clock gate. No valid register address responded on this bus cycle.
-        </p>
-
-        <div class="error-console" id="recovery-console" aria-live="polite">
-          <div><span class="red">[BUS_ERR]</span> Address line 0x0404 floating: High-Z state</div>
-          <div><span class="red">[FATAL]</span> Netlist topology lookup failed</div>
-          <div><span class="blue">[INFO]</span> Recovery subroutine loaded in flash memory</div>
-        </div>
-
+        <div class="error-kicker"><span>404</span><span>PAGE NOT FOUND</span></div>
+        <svg class="error-trace" viewBox="0 0 600 70" aria-hidden="true">
+          <path class="error-trace-base" d="M0 35h150m20 0h52v-24h62v48h62V35h42m22 0h190"/>
+          <path class="error-trace-dash" d="M0 35h150m20 0h52v-24h62v48h62V35h42m22 0h190"/>
+        </svg>
+        <h1 class="error-code">Well, this is a dead end<span>.</span></h1>
+        <p class="error-desc">That page isn’t here. Head back home or take a look at the projects instead.</p>
         <div class="error-actions">
-          <button class="btn-primary" id="btn-recover-clock" type="button">
-            Strobe Clock Recovery <span>↻</span>
-          </button>
-          <a class="btn-secondary" href="index.html">Return to Workbench</a>
-          <a class="btn-secondary" href="projects.html">Browse Projects</a>
+          <a class="btn-primary" href="index.html">Back home <span>↗</span></a>
+          <a class="error-text-link" href="projects.html">Browse selected work <span>↗</span></a>
         </div>
       </div>
     </div>
@@ -71,9 +57,9 @@
 
   <footer>
     <div class="wrap foot">
-      <span>JEGADISWAR S M · 404 HANDLER</span>
-      <span>Silicon. Systems. Possibility.</span>
-      <a href="index.html">Back to safe state ↑</a>
+      <span>JEGADISWAR SM · 404</span>
+      <span>Looks like this link got lost.</span>
+      <a href="index.html">Back home ↑</a>
     </div>
   </footer>
 </body>

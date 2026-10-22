@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7fafe">
-  <meta name="description" content="Q-FLOW28-PF post-quantum cryptography accelerator architecture.">
-  <title>Q-FLOW28-PF — Jegadiswar S M</title>
+  <meta name="theme-color" content="#f7f4ed">
+  <meta name="description" content="Q-FLOW28-PF explores a programmable post-quantum cryptography fabric architecture targeting 28 nm.">
+  <title>Q-FLOW28-PF | Jegadiswar SM</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/site.css?v=gliflow_blue_v3">
-  <script src="assets/site.js?v=gliflow_blue_v3" defer></script>
+  <link rel="stylesheet" href="assets/site.css?v=portfolio-ink-rust-15">
+  <script src="assets/site.js?v=portfolio-ink-rust-15" defer></script>
 </head>
 <body>
   <div class="topline">
     <div class="wrap">
       <div style="display:flex;align-items:center;gap:10px;">
-        <span class="topline-pill"><span class="status-dot"></span>Architecture Phase</span>
-        <span>JSM / Project File 06</span>
+        <span class="topline-pill"><span class="status-dot"></span>Architecture in progress</span>
+        <span>JSM / Post-quantum cryptography</span>
       </div>
       <span>Chennai, India · 2026</span>
     </div>
@@ -27,7 +27,7 @@
     <nav class="nav wrap" aria-label="Main navigation">
       <a class="brand" href="index.html">
         <span class="brand-mark">JSM</span>
-        <span>Jegadiswar S M</span>
+        <span>Jegadiswar SM</span>
       </a>
       <button class="menu" aria-expanded="false" aria-controls="nav-links">Menu +</button>
       <div class="nav-links" id="nav-links">
@@ -43,10 +43,10 @@
   <main>
     <header class="page-hero">
       <div class="wrap">
-        <div class="eyebrow">Project File 06 / Architecture Exploration</div>
-        <h1>Q-FLOW28-PF —<br><em>cryptography in hardware.</em></h1>
+        <div class="eyebrow">Project 06 / Architecture exploration</div>
+        <h1>Exploring hardware<br><em>for post-quantum cryptography.</em></h1>
         <p class="section-lede">
-          A programmable post-quantum cryptography fabric architecture targeting a TSMC 28 nm node.
+          I’m exploring a programmable hardware platform for post-quantum cryptography, with TSMC 28 nm as the target process.
         </p>
       </div>
     </header>
@@ -60,16 +60,16 @@
 
         <div class="detail-body">
           <aside class="detail-side">
-            01 / Design intent<br>
+            01 / What should the fabric accelerate?<br>
             02 / Resource plan<br>
             03 / Integration<br>
             04 / Proof still needed
           </aside>
 
           <div class="detail-content">
-            <h2>Design intent</h2>
+            <h2>What should the fabric accelerate?</h2>
             <p>
-              Explore a shared hardware accelerator platform for post-quantum cryptographic primitives, with secure memory boundaries and high-throughput data movement. This project is at the architecture stage; listed blocks represent specification targets.
+              The idea is to share hardware across post-quantum cryptography algorithms while keeping data movement fast and memory boundaries secure. This is still at the architecture stage, so the blocks below are planned features, not implemented results.
             </p>
 
             <h3>Architecture scope</h3>
@@ -80,18 +80,18 @@
               <li>ML-KEM-512/768/1024 and ML-DSA-44/65/87 algorithm targets.</li>
             </ul>
 
-            <h3>System interfaces and security blocks</h3>
+            <h3>Interfaces and security</h3>
             <p>
               APB4 control register interface, AXI4 master/slave data movement, secure scratchpad memory, internal key vault, TRNG/DRBG, and a security root-of-trust controller form the architectural roadmap.
             </p>
 
             <div class="detail-callout">
-              <b>Target:</b> TSMC 28 nm node. There is no tapeout claim or silicon measurement on this page.
+              <b>Target:</b> TSMC 28 nm. This design has not been fabricated, so there are no silicon measurements.
             </div>
 
-            <h3>Work needed before implementation claims</h3>
+            <h3>What needs to happen before implementation</h3>
             <p>
-              Freeze the supported algorithm parameter sets, define the threat model and security boundaries, quantify shared-resource scheduling and memory traffic, then verify functional correctness and constant-time execution behavior before starting physical design.
+              Before building it, I need to settle which algorithm parameter sets to support, define the threat model, and estimate the scheduling and memory traffic. Then I can verify correctness and constant-time behavior before moving on to physical design.
             </p>
 
             <a class="backlink" href="projects.html">← Back to all projects</a>
@@ -103,8 +103,8 @@
 
   <footer>
     <div class="wrap foot">
-      <span>JEGADISWAR S M · Q-FLOW28-PF</span>
-      <span>Architecture is not silicon.</span>
+      <span>JEGADISWAR SM · Q-FLOW28-PF</span>
+      <span>Still at the design stage. No chip fabricated.</span>
       <div style="display:flex;gap:16px;">
         <a href="index.html">Home</a>
         <a href="projects.html">Project index ↗</a>
